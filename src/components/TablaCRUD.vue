@@ -3,7 +3,7 @@
     :headers="headers"
     :items="filteredCreadores"
     class="elevation-1"
-  >
+    height = "530px">
     <!--Barra superior-->
     <template v-slot:top>
       <!--Dentro de la barra superior-->
@@ -244,11 +244,11 @@ const urlPosts = "https://jsonplaceholder.typicode.com/posts";
 const urlAutores = "https://jsonplaceholder.typicode.com/users";
 
 const headers = [
-  { title: "Autor", key: "autorName", align: "justify", class: "text-amber", width: '150' },
-  { title: "Titulo", key: "title", align: "justify", width: '200' },
-  { title: "Post", key: "post", align: "justify", width: '500' },
+  { title: "Autor", key: "autorName", align: "justify", class: "text-amber", width: '10%' },
+  { title: "Titulo", key: "title", align: "justify", width: '20%' },
+  { title: "Post", key: "post", align: "justify", width: '65%' },
   //{ title: "Autor ID", key: "autorID", align: "justify" }, //TEMPORAL
-  { title: "Acciones", key: "actions", sortable: false, align: "center", width: '10' },
+  { title: "Acciones", key: "actions", sortable: false, align: "center", width: '5%' },
 ];
 
 const defaultItem = {
@@ -429,6 +429,7 @@ const save = () => {
       });
   }
 };
-
+console.log("innerWidth ", window.innerWidth);
+console.log("innerHeight ", window.innerHeight);
 initialize();
 </script>
